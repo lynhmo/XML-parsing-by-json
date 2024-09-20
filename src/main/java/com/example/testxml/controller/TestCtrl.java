@@ -66,7 +66,7 @@ public class TestCtrl {
 
     private JSONObject xmlap(JSONObject jsonObject) {
         String rs = null;
-        JSONObject test=null;
+        JSONObject test = null;
         System.out.println(jsonObject.toString(4));
         for (String key : jsonObject.keySet()) {
             if (key.endsWith(":CongDan")) {

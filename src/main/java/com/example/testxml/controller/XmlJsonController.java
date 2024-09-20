@@ -44,6 +44,7 @@ public class XmlJsonController {
                 "        </ns1:CongdanCollection>\n" +
                 "    </soapenv:Body>\n" +
                 "</soapenv:Envelope>";
+
         String JsonString = "{\n" +
                 "    \"Header\": \"\",\n" +
                 "    \"Body\": {\n" +
@@ -53,6 +54,9 @@ public class XmlJsonController {
                 "                \"SoCMND\": \"222222222\",\n" +
                 "                \"HoVaTen\": {\n" +
                 "                    \"Ten\": [\n" +
+                "                        {\n" +
+                "                            \"Age\": \"123\"\n" +
+                "                        }\n" +
                 "                    ]\n" +
                 "                }\n" +
                 "            }\n" +
