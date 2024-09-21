@@ -28,17 +28,23 @@ public class XmlJsonController {
                 "                <ns1:SoCMND>222222222</ns1:SoCMND>\n" +
                 "                <ns1:HoVaTen>\n" +
                 "                    <ns1:Ten>\n" +
-                "                        <ns1:Age>123</ns1:Age>\n" +
+                "                        <ns1:Age>\n" +
+                "                            <ns1:Age1>123</ns1:Age1>\n" +
+                "                            <ns1:Age2>123</ns1:Age2>\n" +
+                "                        </ns1:Age>\n" +
                 "                        <ns1:Ho>123</ns1:Ho>\n" +
+                "                        <ns1:Ho1>123</ns1:Ho1>\n" +
                 "                    </ns1:Ten>\n" +
                 "                    <ns1:Ten>\n" +
-                "                        <ns1:Age>123</ns1:Age>\n" +
+                "                        <ns1:Age>\n" +
+                "                            <ns1:Age1>123</ns1:Age1>\n" +
+                "                            <ns1:Age2>123</ns1:Age2>\n" +
+                "                        </ns1:Age>\n" +
                 "                        <ns1:Ho>123</ns1:Ho>\n" +
+                "                        <ns1:Ho1>123</ns1:Ho1>\n" +
                 "                    </ns1:Ten>\n" +
-                "                    <ns1:Ten>\n" +
-                "                        <ns1:Age>123</ns1:Age>\n" +
-                "                        <ns1:Ho>123</ns1:Ho>\n" +
-                "                    </ns1:Ten>\n" +
+                "                    <ns1:Tuoi>123</ns1:Tuoi>\n" +
+                "                    <ns1:Tuoi1>123</ns1:Tuoi1>\n" +
                 "                </ns1:HoVaTen>\n" +
                 "            </ns1:CongDan>\n" +
                 "        </ns1:CongdanCollection>\n" +
@@ -55,9 +61,13 @@ public class XmlJsonController {
                 "                \"HoVaTen\": {\n" +
                 "                    \"Ten\": [\n" +
                 "                        {\n" +
-                "                            \"Age\": \"123\"\n" +
+                "                            \"Age\": {\n" +
+                "                                \"Age1\": \"123\"\n" +
+                "                            },\n" +
+                "                            \"Ho1\": \"123\"\n" +
                 "                        }\n" +
-                "                    ]\n" +
+                "                    ],\n" +
+                "                    \"Tuoi1\": \"123\"\n" +
                 "                }\n" +
                 "            }\n" +
                 "        }\n" +
