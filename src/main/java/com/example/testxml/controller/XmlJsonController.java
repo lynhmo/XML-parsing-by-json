@@ -62,7 +62,8 @@ public class XmlJsonController {
                 "                    \"Ten\": [\n" +
                 "                        {\n" +
                 "                            \"Age\": {\n" +
-                "                                \"Age1\": \"123\"\n" +
+                "                                \"Age1\": \"123\",\n" +
+                "                                \"Age2\": \"123\"\n" +
                 "                            },\n" +
                 "                            \"Ho1\": \"123\"\n" +
                 "                        }\n" +
