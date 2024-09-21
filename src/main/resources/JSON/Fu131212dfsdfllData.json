@@ -1,0 +1,27 @@
+{
+    "Age": {
+        "Age1": {
+            "type": "List",
+            "attribute": {
+                "String": ""
+            },
+            "length": "123"
+        },
+        "Age2": {
+            "type": "Object",
+            "attribute": {
+                "test": "",
+                "oke": ""
+            },
+            "length": "123"},
+        "Age3": {
+            "type": "List",
+            "attribute": {
+                "test": "",
+                "oke": ""
+            },
+            "length": "123"
+        },
+        "Age4": "123"
+    }
+}

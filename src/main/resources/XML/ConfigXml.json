@@ -1,0 +1,22 @@
+{
+  "Header": "",
+  "Body": {
+    "CongdanCollection": {
+      "CongDan": {
+        "SoDinhDanh": "100000010836",
+        "SoCMND": "222222222",
+        "HoVaTen": {
+          "Ten": [
+            {
+              "Age": {
+                "Age2": "123"
+              },
+              "Ho": "123"
+            }
+          ],
+          "Tuoi1": "123"
+        }
+      }
+    }
+  }
+}

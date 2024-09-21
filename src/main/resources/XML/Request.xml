@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header xmlns:dan="http://dancuquocgia.bca"/>
+    <soapenv:Body xmlns:dan="http://dancuquocgia.bca">
+        <ns1:CongdanCollection xmlns:ns1="http://www.mic.gov.vn/dancu/1.0">
+            <ns1:CongDan>
+                <ns1:SoDinhDanh>100000010836</ns1:SoDinhDanh>
+                <ns1:SoCMND>222222222</ns1:SoCMND>
+                <ns1:HoVaTen>
+                    <ns1:Ten>
+                        <ns1:Age>
+                            <ns1:Age1>123</ns1:Age1>
+                            <ns1:Age2>123</ns1:Age2>
+                        </ns1:Age>
+                        <ns1:Ho>123</ns1:Ho>
+                        <ns1:Ho1>123</ns1:Ho1>
+                    </ns1:Ten>
+                    <ns1:Ten>
+                        <ns1:Age>
+                            <ns1:Age1>123</ns1:Age1>
+                            <ns1:Age2>123</ns1:Age2>
+                        </ns1:Age>
+                        <ns1:Ho>123</ns1:Ho>
+                        <ns1:Ho1>123</ns1:Ho1>
+                    </ns1:Ten>
+                    <ns1:Tuoi>123</ns1:Tuoi>
+                    <ns1:Tuoi1>123</ns1:Tuoi1>
+                </ns1:HoVaTen>
+            </ns1:CongDan>
+        </ns1:CongdanCollection>
+    </soapenv:Body>
+</soapenv:Envelope>
