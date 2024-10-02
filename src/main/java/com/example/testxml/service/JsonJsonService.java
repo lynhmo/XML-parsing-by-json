@@ -9,6 +9,7 @@ import java.util.Map;
 
 @Service
 public class JsonJsonService {
+    @SuppressWarnings("unchecked")
     private void mapperObject(Map<String, Object> output, Map<String, Object> response) {
         try {
             List<Map<String, Object>> dataResponse, dataOutput;
@@ -37,7 +38,8 @@ public class JsonJsonService {
         }
     }
 
-    public List<Map<String, Object>> propFilterList(List<Map<String, Object>> fullOutput, Map<String, Object> filterOutpt) {
+    public List<Map<String, Object>> propFilterList(List<Map<String, Object>> fullOutput,
+            Map<String, Object> filterOutpt) {
         for (Map<String, Object> stringObjectMap : fullOutput) {
             mapperObject(filterOutpt, stringObjectMap);
         }

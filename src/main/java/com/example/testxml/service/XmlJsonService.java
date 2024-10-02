@@ -28,6 +28,7 @@ public class XmlJsonService {
     }
 
     // Parses the JSON string
+    @SuppressWarnings("unchecked")
     private Map<String, Object> parseJson(String jsonString) throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(jsonString, Map.class);
@@ -39,6 +40,7 @@ public class XmlJsonService {
         removeMissingFields(nodeList, jsonFields);
     }
 
+    @SuppressWarnings("unchecked")
     private void removeMissingFields(NodeList nodeList, Object jsonElement) {
         if (jsonElement instanceof Map) {
             Map<String, Object> jsonFields = (Map<String, Object>) jsonElement;
@@ -108,10 +110,11 @@ public class XmlJsonService {
         }
     }
 
-
     // Example method to determine if a child node matches a JSON object or element
+    @SuppressWarnings("unchecked")
     private boolean isMatchingNode(Node childNode, Object jsonArrayElement) {
-        // If the element in the JSON array is a Map, treat it as an object and check for matching attributes
+        // If the element in the JSON array is a Map, treat it as an object and check
+        // for matching attributes
         if (jsonArrayElement instanceof Map) {
             Map<String, Object> jsonObject = (Map<String, Object>) jsonArrayElement;
             String idAttribute = childNode.getLocalName() != null
@@ -121,7 +124,8 @@ public class XmlJsonService {
             return idAttribute != null && jsonObject.containsKey(idAttribute); // Adjust as needed
         }
 
-        // If the element in the JSON array is a primitive type (e.g., String, Number), compare the text content
+        // If the element in the JSON array is a primitive type (e.g., String, Number),
+        // compare the text content
         if (jsonArrayElement instanceof String || jsonArrayElement instanceof Number) {
             return jsonArrayElement.toString().equals(childNode.getTextContent().trim());
         }

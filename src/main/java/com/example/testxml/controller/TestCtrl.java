@@ -1,6 +1,5 @@
 package com.example.testxml.controller;
 
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -45,7 +44,6 @@ public class TestCtrl {
         return ResponseEntity.ok(new String(Base64.getEncoder().encode(dto.getBytes())));
     }
 
-
     @PostMapping(value = "/gson")
     public ResponseEntity<?> gsonTest() throws NullPointerException {
         String dto = "{}";
@@ -63,44 +61,43 @@ public class TestCtrl {
         return ResponseEntity.ok(testMap);
     }
 
-
-    private JSONObject xmlap(JSONObject jsonObject) {
-        String rs = null;
-        JSONObject test = null;
-        System.out.println(jsonObject.toString(4));
-        for (String key : jsonObject.keySet()) {
-            if (key.endsWith(":CongDan")) {
-                return jsonObject.getJSONObject(key);
-            }
-            test = xmlap(jsonObject.getJSONObject(key));
-            break;
-        }
-        return test;
-    }
+    // private JSONObject xmlap(JSONObject jsonObject) {
+    //     String rs = null;
+    //     JSONObject test = null;
+    //     System.out.println(jsonObject.toString(4));
+    //     for (String key : jsonObject.keySet()) {
+    //         if (key.endsWith(":CongDan")) {
+    //             return jsonObject.getJSONObject(key);
+    //         }
+    //         test = xmlap(jsonObject.getJSONObject(key));
+    //         break;
+    //     }
+    //     return test;
+    // }
 
     @PostMapping(value = "/testParse", consumes = MediaType.TEXT_XML_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> asdjasjdh(@RequestBody String originalXML) throws IOException {
         try {
             // Convert XML to JSON
             JSONObject jsonObject = XML.toJSONObject(originalXML);
-//            System.out.println("Converted to JSON:");
-//            System.out.println(jsonObject.toString(4));  // Pretty-print with 4 spaces
-//
-//            JSONObject bodyKey = this.xmlap(jsonObject);
-//
-//            // Now you can safely get the Body object
-//            if (bodyKey != null) {
-//                // Use 'body' as needed
-//                System.out.println(bodyKey.toString(4));
-//            }
-//            System.out.println("Modified JSON:");
-//            System.out.println(jsonObject.toString(4));  // Print modified JSON
-//
-//
-//            // Convert JSON back to XML
-//            String modifiedXml = XML.toString(jsonObject);
-//            System.out.println("Converted back to XML:");
-//            System.out.println(modifiedXml);
+            // System.out.println("Converted to JSON:");
+            // System.out.println(jsonObject.toString(4)); // Pretty-print with 4 spaces
+            //
+            // JSONObject bodyKey = this.xmlap(jsonObject);
+            //
+            // // Now you can safely get the Body object
+            // if (bodyKey != null) {
+            // // Use 'body' as needed
+            // System.out.println(bodyKey.toString(4));
+            // }
+            // System.out.println("Modified JSON:");
+            // System.out.println(jsonObject.toString(4)); // Print modified JSON
+            //
+            //
+            // // Convert JSON back to XML
+            // String modifiedXml = XML.toString(jsonObject);
+            // System.out.println("Converted back to XML:");
+            // System.out.println(modifiedXml);
             return ResponseEntity.ok(jsonObject.toString(4));
 
         } catch (Exception e) {
@@ -109,6 +106,5 @@ public class TestCtrl {
         return ResponseEntity.ok("OK");
 
     }
-
 
 }

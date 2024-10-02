@@ -30,6 +30,7 @@ public class XmlJsonServiceBackUp {
     }
 
     // Phân tích chuỗi JSON
+    @SuppressWarnings("unchecked")
     private Map<String, Object> parseJson(String jsonString) throws Exception {
         // Tạo ObjectMapper để đọc JSON
         ObjectMapper objectMapper = new ObjectMapper();
@@ -46,6 +47,7 @@ public class XmlJsonServiceBackUp {
     }
 
     // Loại bỏ các trường không có trong JSON từ danh sách node XML
+    @SuppressWarnings("unchecked")
     private void removeMissingFields(NodeList nodeList, Object jsonElement) {
         // Nếu JSON là một Map, kiểm tra các key và node XML tương ứng
         if (jsonElement instanceof Map) {
@@ -119,6 +121,7 @@ public class XmlJsonServiceBackUp {
     }
 
     // Hàm kiểm tra xem node con có khớp với phần tử JSON hay không
+    @SuppressWarnings("unchecked")
     private boolean isMatchingNode(Node childNode, Object jsonArrayElement) {
         // Nếu phần tử trong mảng JSON là một Map, kiểm tra các thuộc tính khớp
         if (jsonArrayElement instanceof Map) {
