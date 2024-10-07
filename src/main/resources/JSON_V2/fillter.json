@@ -1,0 +1,121 @@
+{
+    "type": "object",
+    "properties": {
+        "SoDinhDanh": {
+            "type": "string",
+            "length": 12,
+            "required": true,
+            "regex": "^[0-9]{12}$"
+        },
+        "SoCMND": {
+            "type": "string",
+            "length": 9,
+            "required": true,
+            "regex": "^[0-9]{9}$"
+        },
+        "HoVaTen": {
+            "type": "object",
+            "required": true,
+            "properties": {
+                "Ten": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Age": {
+                                "type": "object",
+                                "required": true,
+                                "properties": {
+                                    "Age1": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "regex": "^[0-9]+$"
+                                        }
+                                    },
+                                    "Age2": {
+                                        "type": "object",
+                                        "properties": {
+                                            "test": {
+                                                "type": "string",
+                                                "length": 0
+                                            },
+                                            "oke": {
+                                                "type": "string",
+                                                "length": 0
+                                            }
+                                        }
+                                    },
+                                    "Age3": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "test": {
+                                                    "type": "string",
+                                                    "length": 0
+                                                },
+                                                "oke": {
+                                                    "type": "string",
+                                                    "length": 0
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "Age4": {
+                                        "type": "string",
+                                        "regex": "^[0-9]+$"
+                                    }
+                                }
+                            },
+                            "Ho1": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "regex": "^[0-9]+$"
+                                }
+                            },
+                            "Ho2": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "dem": {
+                                            "type": "string",
+                                            "length": 0
+                                        },
+                                        "dem2": {
+                                            "type": "string",
+                                            "length": 0
+                                        }
+                                    }
+                                }
+                            },
+                            "Ho3": {
+                                "type": "string",
+                                "regex": "^[0-9]+$"
+                            }
+                        }
+                    }
+                },
+                "Tuoi1": {
+                    "type": "string",
+                    "regex": "^[0-9]+$"
+                },
+                "namSinh": {
+                    "type": "object",
+                    "properties": {
+                        "thang": {
+                            "type": "string",
+                            "regex": "^[0-9]+$"
+                        },
+                        "ngay": {
+                            "type": "string",
+                            "regex": "^[a-zA-Z]+$"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
